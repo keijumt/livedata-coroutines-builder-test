@@ -1,0 +1,2 @@
+rootProject.name='livedata-coroutines-builder-test'
+include ':app'
