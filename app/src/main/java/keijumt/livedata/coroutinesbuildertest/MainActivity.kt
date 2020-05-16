@@ -12,9 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mainViewModel by viewModels<MainViewModel> {
-            MainViewModelFactory(ExampleRepository(listOf("a", "b", "c")))
-        }
+        val mainViewModel by viewModels<MainViewModel> { MainViewModelFactory(ExampleRepository()) }
 
         mainViewModel.examples.observe(this) {
             println(it)
